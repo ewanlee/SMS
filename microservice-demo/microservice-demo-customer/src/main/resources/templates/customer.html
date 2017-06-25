@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+	<head>
+	<title>Customer : Edit</title>
+
+
+	</head>
+	<body>
+
+	<div layout:fragment="header" class="fh5co-loader"></div>
+	
+	<div layout:fragment="content" id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-lg-4">
+							<div id="fh5co-logo"><a href="/">Aida SMS<span>.</span></a></div>
+						</div>
+						<div class="col-xs-8 text-right menu-1">
+							<ul>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/order/">Orders</a></li>
+								<li><a href="#">Abouts</a></li>
+								<li class="has-dropdown btn-cta">
+									<a href="/customer/list.html"><span>Moniter</span></a>
+									<ul class="dropdown">
+										<li><a href="/" onclick="javascript:event.target.port=8761">Eureka</a></li>
+										<li><a href="/hystrix" onclick="javascript:event.target.port=8989">Hystrix dashboard</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+	<div id="fh5co-contact">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Add Customer</h2>
+					<p>Please input the base info of a customer.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-push-2 animate-box">
+					<form th:action="${customer.id!=0} ? ${customer.id}+'.html' : 'form.html' " th:object="${customer}"
+						th:method="${customer.id != 0} ? put : post" role="form">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label >Name</label>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" th:field="*{name}" class="form-control" placeholder="name" />
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label >Firstname</label>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" th:field="*{firstname}" class="form-control" placeholder="firstname" />
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label >EMail</label>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" th:field="*{email}" class="form-control" placeholder="email" />
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label >Street</label>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" th:field="*{street}" class="form-control" placeholder="street" />
+							</div>					
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label >City</label>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" th:field="*{city}" class="form-control" placeholder="city" />
+							</div>					
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>					
+					</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+	<div id="fh5co-started">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>AIDA-SMS</h2>
+						<p>This is a proof-of-concept application, which demonstrates Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker. With a pretty neat user interface, by the way.</p>
+						<p><a href="http://aida.ecnu.edu.cn/" class="btn btn-default btn-lg">Contact Us</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	</body>
+</html>
+

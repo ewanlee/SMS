@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+	<head>
+	<title>Item : View all</title>
+	</head>
+	<body>
+		
+	<div layout:fragment="header" class="fh5co-loader"></div>
+	
+	<div layout:fragment="content" id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-lg-4">
+							<div id="fh5co-logo"><a href="/">Aida SMS<span>.</span></a></div>
+						</div>
+						<div class="col-xs-8 text-right menu-1">
+							<ul>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/order/">Orders</a></li>
+								<li><a href="#">Abouts</a></li>
+								<li class="has-dropdown btn-cta">
+									<a href="/customer/list.html"><span>Moniter</span></a>
+									<ul class="dropdown">
+										<li><a href="/" onclick="javascript:event.target.port=8761">Eureka</a></li>
+										<li><a href="/" onclick="javascript:event.target.port=8989">Hystrix dashboard</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<h2>Edit Orders</h2>
+			<form action="." th:object="${order}" method="post" role="form">
+				<div class="form-group">
+					<label for="selectCustomer">Customer</label> <select
+						name="selectCustomer" th:field="*{customerId}">
+						<option th:each="customer : ${customers}"
+							th:text="${customer.firstname}+' '+${customer.name}"
+							th:value="${customer.customerId}" value="42" >Rod Johnson</option>
+					</select>
+				</div>
+				
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<td><label>Order Id</label></td>
+							<td><label>Count</label></td>
+							<td><label>Item</label></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="orderLine, orderLineStat : *{orderLine}">
+							<td><a th:text="${orderLineStat.count}">1</a></td>
+							<td>
+								<input type="text" style="height: auto; width: 60px"
+									th:field="*{orderLine[__${orderLineStat.index}__].count}" />
+							</td>
+							<td>
+								<select
+									th:field="*{orderLine[__${orderLineStat.index}__].itemId}">
+									<option th:each="item : ${items}" th:text="${item.name}"
+										th:value="${item.itemId}" value="42" >MacBook</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="row" style="margin-top: 60px; text-align: right" >
+					<button type="submit" name="addLine" formaction="./line" class="btn btn-default">Add
+						Line</button>
+					<button type="submit" name="submit" class="btn btn-default">Submit</button>
+				</div>
+		</form>
+		</div>
+	</div>
+	
+	<div id="fh5co-started">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>AIDA-SMS</h2>
+						<p>This is a proof-of-concept application, which demonstrates Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker. With a pretty neat user interface, by the way.</p>
+						<p><a href="http://aida.ecnu.edu.cn/" class="btn btn-default btn-lg">Contact Us</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	</body>
+</html>
+

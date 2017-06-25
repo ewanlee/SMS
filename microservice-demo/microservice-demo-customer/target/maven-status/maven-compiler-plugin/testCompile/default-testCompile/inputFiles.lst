@@ -1,0 +1,5 @@
+/hdd/microservice/microservice-demo/microservice-demo-customer/src/test/java/com/ewolff/microservice/customer/CustomerTestApp.java
+/hdd/microservice/microservice-demo/microservice-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/CustomerConsumerDrivenContractTest.java
+/hdd/microservice/microservice-demo/microservice-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/Customer.java
+/hdd/microservice/microservice-demo/microservice-demo-customer/src/test/java/com/ewolff/microservice/customer/CustomerWebIntegrationTest.java
+/hdd/microservice/microservice-demo/microservice-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/CustomerClient.java

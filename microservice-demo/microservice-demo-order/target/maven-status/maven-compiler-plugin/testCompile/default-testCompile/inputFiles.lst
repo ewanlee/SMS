@@ -1,0 +1,6 @@
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/customerstub/CustomerStub.java
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/logic/OrderWebIntegrationTest.java
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/logic/CatalogConsumerDrivenContractTest.java
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/OrderTestApp.java
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/catalogstub/CatalogStub.java
+/hdd/microservice/microservice-demo/microservice-demo-order/src/test/java/com/ewolff/microservice/order/logic/CustomerConsumerDrivenContractTest.java

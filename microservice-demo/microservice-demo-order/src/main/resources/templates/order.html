@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+	<head>
+	<title>Item : View all</title>
+	</head>
+	<body>
+		
+	<div layout:fragment="header" class="fh5co-loader"></div>
+	
+	<div layout:fragment="content" id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-lg-4">
+							<div id="fh5co-logo"><a href="/">Aida SMS<span>.</span></a></div>
+						</div>
+						<div class="col-xs-8 text-right menu-1">
+							<ul>
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/order/">Orders</a></li>
+								<li><a href="#">Abouts</a></li>
+								<li class="has-dropdown btn-cta">
+									<a href="/customer/list.html"><span>Moniter</span></a>
+									<ul class="dropdown">
+										<li><a href="/" onclick="javascript:event.target.port=8761">Eureka</a></li>
+										<li><a href="/" onclick="javascript:event.target.port=8989">Hystrix dashboard</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<h2> Order Info</h2>
+			<div class="row">
+				<div class="col-md-2"><label>Customer Name :</label></div>
+				<div class="col-md-2"
+					th:text="${@customerClient.getOne(order.customerId).firstname}+' '+${@customerClient.getOne(order.customerId).name}"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label>Total price :</label></div>
+				<div class="col-md-2" th:text="${order.totalPrice(@catalogClient)}"></div>
+			</div>
+
+
+			<div class="row" style="margin-top: 30px; margin-bottom: 20px">
+				<div class="col-md-2"><label>Order Lines :</label></div>
+			</div>
+			
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<td><label>Quantity</label></td>
+						<td><label>Item Name</label></td>
+						<td><label>Price</label></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="orderLine : ${order.orderLine}">
+						<td><a th:text="${orderLine.count}"></a></td>
+						<td><a th:text="${@catalogClient.getOne(orderLine.itemId).name}"></a></td>
+						<td><a th:text="${@catalogClient.getOne(orderLine.itemId).price}"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div id="fh5co-started">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>AIDA-SMS</h2>
+						<p>This is a proof-of-concept application, which demonstrates Microservice Architecture Pattern using Spring Boot, Spring Cloud and Docker. With a pretty neat user interface, by the way.</p>
+						<p><a href="http://aida.ecnu.edu.cn/" class="btn btn-default btn-lg">Contact Us</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+
+	</body>
+</html>
+

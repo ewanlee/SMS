@@ -1,0 +1,6 @@
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/CatalogWebIntegrationTest.java
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/CatalogTestApp.java
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/cdc/CatalogClient.java
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/cdc/CatalogConsumerDrivenContractTest.java
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/cdc/Item.java
+/hdd/microservice/microservice-demo/microservice-demo-catalog/src/test/java/com/ewolff/microservice/catalog/RepositoryTest.java
