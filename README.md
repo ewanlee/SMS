@@ -1,7 +1,7 @@
 SMS
 ==============
 
-一个简单的网店管理系统。
+SMS (Store Management System), 一个简单的网店管理系统。
 
 这是一个用于展示微服务的 proof-of-concept 应用，运用了Spring Boot, Spring Cloud 以及 Docker部署。
 
