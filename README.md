@@ -149,45 +149,45 @@ Hystrix 是断路器模式的具体实现，其可以调节网络访问依赖中
 
 ![index_1](img/index_1.png)
 
-![index_2](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/index_2.png)
+![index_2](img/index_2.png)
 
 
 
 **Customer Service**
 
-![customers_list](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/customers_list.png)
+![customers_list](img/customers_list.png)
 
-![add_customer](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/add_customer.png)
+![add_customer](img/add_customer.png)
 
-![success](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/successful.png)
+![success](img/successful.png)
 
 
 
 **Catalog Service**
 
-![items_list](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/items_list.png)
+![items_list](img/items_list.png)
 
-![add_item](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/add_item.png)
+![add_item](img/add_item.png)
 
 
 
 **Order Service**
 
-![orders_list](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/orders_list.png)
+![orders_list](img/orders_list.png)
 
-![add_order](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/add_order.png)
+![add_order](img/add_order.png)
 
-![order_details](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/order_details.png)
+![order_details](img/order_details.png)
 
 
 
 **Eukera Service**
 
-![eukera](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/eukera.png)
+![eukera](img/eukera.png)
 
 
 
 **Hystrix Dashboard**
 
-![order_hystrix](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/order_hystrix.png)
+![order_hystrix](img/order_hystrix.png)
 
