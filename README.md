@@ -147,7 +147,7 @@ Hystrix 是断路器模式的具体实现，其可以调节网络访问依赖中
 
 
 
-![index_1](https://github.com/ewanlee/sms/img/index_1.png)
+![index_1](https://github.com/ewanlee/sms/blob/master/sms/img/index_1.png)
 
 ![index_2](http://o7ie0tcjk.bkt.clouddn.com/microservice/lec-proj/ui/index_2.png)
 
